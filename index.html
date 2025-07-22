@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./src/output.css" rel="stylesheet">
+        <title>Workly</title>
+    
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="w-full h-[72px] px-4 md:px-10 flex justify-center items-center bg-white sticky top-0 z-50 shadow">
+            <div class="w-full max-w-[1312px] flex justify-between items-center">
+                <!-- Logo + Navigation -->
+                <div class="flex items-center gap-6">
+                    <!-- Logo -->
+                    <div class="w-[70px]">
+                        <img src="./img/file.svg" alt="Workly logo" class="w-full h-full object-contain"/>
+                    </div>
+                    <!-- Nav (Desktop) -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex gap-6 text-sm font-medium text-black">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Locations</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Actions (Desktop) -->
+                <div class="hidden md:flex gap-2">
+                    <button class="w-[95px] h-9 border border-black text-black">Sign Up</button>
+                    <button class="w-[95px] h-9 bg-black text-white">Login</button>
+                </div>
+                <!-- Burger Menu (Mobile) -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="focus:outline-none">
+                        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden absolute top-20 left-0 w-full bg-white shadow-lg hidden">
+                <ul class="flex flex-col gap-4 px-6 py-4 text-sm font-medium text-black">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <div class="flex flex-col gap-2 mt-4">
+                        <button class="w-full h-9 border border-black text-black">Sign Up</button>
+                        <button class="w-full h-9 bg-black text-white">Login</button>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <!-- HERO SECTION -->
+        <section 
+        class="relative h-screen bg-cover bg-center bg-no-repeat flex items-center"
+        style="background-image: url('./img/heroSection.jpg');"
+        >
+            <!-- Dark Overlay -->       
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <!-- Hero Content -->
+            <div class="relative z-10 max-w-4xl px-6 md:px-12 text-white">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight max-w-xl">
+                    Discover Your Ideal <br />
+                    Coworking Space Today
+                </h1>
+                <p class="mt-6 text-sm md:text-base max-w-md">
+                    Welcome to Workly, where creativity meets collaboration. Join a vibrant community of freelancers and professionals in the heart of Casablanca.
+                </p>
+                <button class="mt-8 px-6 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200 transition">
+                    Book a section
+                </button>
+            </div>
+        </section>
+        <footer>
+            <div class="w-[1440px] h-[169px]">
+                <div class="w-full h-[36px] w-max-[1280px] flex justify-between">
+                    <div class="w-[70px]">
+                        <img src="./img/file.svg" alt="Workly logo" class="w-full h-full object-contain"/>
+                    </div>
+                    <!--Links-->
+                    <ul class="flex flex-row gap-4">
+                        <li>Our Blogs</li>
+                        <li>Joins Us</li>
+                        <li>Get Inspired</li>
+                        <li>Community Events</li>
+                        <li>FAQs</li>
+                    </ul>
+                    <!--Social Media icon Links-->
+                    <ul class="flex  flex-row gap-4">
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <hr>
+                    <!--policy Links-->
+                    <ul class="flex  flex-row gap-4">
+                        <li>© 2025 Workly. All rights reserved</li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms of Use</a></li>
+                        <li><a href="">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
