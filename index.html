@@ -4,12 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./src/output.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            .font-roboto {
+                font-family: 'Roboto', sans-serif;
+            }
+        </style>
         <title>Workly</title>
-    
+        
     </head>
     <body>
         <!-- HEADER -->
-        <header class="w-full h-[72px] px-4 md:px-10 flex justify-center items-center bg-white sticky top-0 z-50 shadow">
+        <header class="w-full max-w-[1440px] h-[72px] px-4 md:px-10 flex justify-center items-center bg-white sticky top-0 z-50 shadow">
             <div class="w-full max-w-[1312px] flex justify-between items-center">
                 <!-- Logo + Navigation -->
                 <div class="flex items-center gap-6">
@@ -61,7 +70,7 @@
         </header>
         <!-- HERO SECTION -->
         <section 
-        class="relative h-screen bg-cover bg-center bg-no-repeat flex items-center"
+        class="relative w-full max-w-[1440px] h-screen bg-cover bg-center bg-no-repeat flex items-center"
         style="background-image: url('./img/heroSection.jpg');"
         >
             <!-- Dark Overlay -->       
@@ -80,39 +89,72 @@
                 </button>
             </div>
         </section>
-        <footer>
-            <div class="w-[1440px] h-[169px]">
-                <div class="w-full h-[36px] w-max-[1280px] flex justify-between">
-                    <div class="w-[70px]">
-                        <img src="./img/file.svg" alt="Workly logo" class="w-full h-full object-contain"/>
+        <!--SERVICE SECTION-->
+        <section class="service bg-white flex justify-center items-center px-4 py-12">
+            <div class="service_contaire flex flex-col gap-8 md:gap-20 ">
+                <div class="service_headres max-w-[768px]">
+                    <h2 class="text-2xl font-bold leading-tight text-center pb-4 font-roboto">Your Creative Workspace Awaits at Workly</h2>
+                    <p class="text-center font-roboto">At Workly, we redefine the concept of coworking. Join a vibrant community where freelancers and startups thrive together.</p>
+                </div>
+                <div class="service_content w-full flex items-center md:justify-between  flex-col md:flex-row gap-12 md:gap-14">
+                    <div class="srv_ctt1 flex flex-col items-center gap-5 md:gap-6">
+                        <i class="fa-solid fa-alarm-clock fa-2x"></i>
+                        <h4 class="text-lg font-semibold text-black text-center font-roboto">Open 24 hours</h4>
                     </div>
-                    <!--Links-->
-                    <ul class="flex flex-row gap-4">
+                    <div class="srv_ctt2 flex flex-col items-center gap-5 md:gap-6">
+                        <i class="fa-solid fa-cookie fa-2x"></i>
+                        <h4 class="text-lg font-semibold text-black text-center font-roboto"> Free Snack & Drink</h4>
+                    </div>
+                    <div class="srv_ctt3 flex flex-col items-center gap-5 md:gap-6">
+                        <i class="fa-solid fa-gamepad fa-2x"></i>
+                        <h4 class="text-lg font-semibold text-black text-center font-roboto">Enjoy Game Zone</h4>
+                    </div>
+                </div>
+                <div class="service_btn flex justify-center items-center">
+                    <button class="p-3 border text-black font-roboto">Learn More</button>
+                </div>
+            </div>
+
+        </section>
+        
+        <!--FOOTER-->
+        <footer class="w-full bg-white px-4 py-6 flex justify-center items-center">
+            <div class="w-full max-w-[1280px] flex flex-col gap-10 md:gap-20">
+                <!-- Top section -->
+                <div class="w-full grid grid-cols-1 md:grid-cols-3 items-center gap-6">
+                    <!-- Logo -->
+                    <div class="flex justify-center md:justify-start">
+                        <img src="./img/file.svg" alt="Workly logo" class="h-10 md:h-12 object-contain" />
+                    </div>
+                    <!-- Nav Links -->
+                    <ul class="flex flex-col md:flex-row justify-center gap-4 font-roboto font-medium text-sm text-center">
                         <li>Our Blogs</li>
-                        <li>Joins Us</li>
+                        <li>Join Us</li>
                         <li>Get Inspired</li>
                         <li>Community Events</li>
                         <li>FAQs</li>
                     </ul>
-                    <!--Social Media icon Links-->
-                    <ul class="flex  flex-row gap-4">
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                    <!-- Social Icons -->
+                    <ul class="flex justify-center md:justify-end gap-3 text-xl">
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
                     </ul>
                 </div>
-                <div>
-                    <hr>
-                    <!--policy Links-->
-                    <ul class="flex  flex-row gap-4">
+
+                <!-- Bottom section -->
+                <div class="w-full flex flex-col items-center gap-4">
+                    <hr class="w-full">
+                    <ul class="flex flex-col md:flex-row gap-2 md:gap-4 text-sm justify-center text-center">
                         <li>© 2025 Workly. All rights reserved</li>
-                        <li><a href="">Privacy Policy</a></li>
-                        <li><a href="">Terms of Use</a></li>
-                        <li><a href="">Cookie Policy</a></li>
+                        <li><a href="" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="" class="hover:underline">Terms of Use</a></li>
+                        <li><a href="" class="hover:underline">Cookie Policy</a></li>
                     </ul>
                 </div>
+
             </div>
         </footer>
 

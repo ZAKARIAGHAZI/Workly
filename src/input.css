@@ -1,7 +1,1 @@
 @import "tailwindcss";
-
-@theme {
-    --color-darke: #4C4C4C;
-    --color-darker: #191919;
-    --color-darkest: #000000;
-}
