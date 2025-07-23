@@ -117,15 +117,28 @@
 
         </section>
         <!--LOCATIONS SECTION-->
-        <section class="location_section px-4 py-12">
-            <div class="location_container">
+        <section class="location_section px-5 py-14 md:px-16 md:py-14">
+            <div class="location_container flex flex-col gap-12 md:gap-20">
                 <div class="location_headers flex flex-col justify-center items-center gap-5 md:gap-6">
                     <h2 class="text-2xl font-bold leading-tight font-roboto">Workspace Showcase</h2>
                     <p class="text-center font-roboto">Explore our vibrant coworking spaces designed for creativity.</p>
                 </div>
-                <div class="location_content">
-                    
+                <!--Images of works spaces-->
+                <div class="location_content relative flex flex-row gap-6 md:gap-8 overflow-hidden cursor-pointer">
+                    <!--Left slider-->
+                    <div class=" h-[46px] w-[46px] bg-white cursor-pointer text-center rounded-[50%] border leading-12 absolute top-1/2 left-2 -translate-y-1/2 z-10">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <img class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover" src="img/space1.jpeg" alt="">
+                    <img class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover" src="img/space2.jpeg" alt="">
+                    <img class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover" src="img/space3.jpeg" alt="">
+                    <img class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover" src="img/space3.jpeg" alt="">
+                    <!--right slider-->
+                    <div class=" h-[46px] w-[46px] bg-white cursor-pointer text-center rounded-[50%] border leading-12 absolute top-1/2 right-2 -translate-y-1/2 z-10">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
                 </div>
+                
             </div>
         </section>
         <!--ABOUT SECTION-->
