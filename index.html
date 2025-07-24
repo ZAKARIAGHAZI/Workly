@@ -21,6 +21,9 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <!--Animation library AOS JS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!--Splide library-->
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
@@ -32,8 +35,10 @@
     <title>Workly</title>
   </head>
   <body>
+
+
     <!-- HEADER -->
-    <header
+    <header 
       class="w-full h-[72px] px-4 md:px-10 flex justify-center items-center bg-white sticky top-0 z-50 shadow"
     >
       <div class="w-full flex justify-between items-center">
@@ -50,11 +55,11 @@
           <!-- Nav (Desktop) -->
           <nav class="hidden md:flex">
             <ul class="flex gap-6 text-sm font-medium text-black">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Service</a></li>
-              <li><a href="#">Locations</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">About Us</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#service">Service</a></li>
+              <li><a href="#locations">Locations</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#about">About Us</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
           </nav>
@@ -88,16 +93,16 @@
       <!-- Mobile Menu -->
       <div
         id="mobile-menu"
-        class="md:hidden absolute top-20 left-0 w-full bg-white shadow-lg hidden"
+        class="md:hidden absolute top-17 left-0 w-full bg-white shadow-lg hidden"
       >
         <ul
           class="flex flex-col gap-4 px-6 py-4 text-sm font-medium text-black"
         >
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Locations</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">About Us</a></li>
           <li><a href="#">Contact</a></li>
           <div class="flex flex-col gap-2 mt-4">
             <button class="w-full h-9 border border-black text-black">
@@ -109,8 +114,11 @@
       </div>
     </header>
     <!--END HEADER-->
+
+
+
     <!-- HERO SECTION -->
-    <section
+    <section id="home"
       class="relative w-full h-screen bg-cover bg-center bg-no-repeat flex items-center"
       style="background-image: url('./img/heroSection.jpg')"
     >
@@ -135,8 +143,34 @@
       </div>
     </section>
     <!--END HERO SECTION -->
+
+
+    <!--POP OUT SECTION "module"-->
+
+    <div class="modul">
+      <div class="modul-header"></div>
+      <div class="module_form">
+        <label for="FName">First Name : </label>
+        <input type="text" name="FName" placeholder="First Name">
+        <label for="LName">Last Name : </label>
+        <input type="text" name="LName" placeholder="Last Name">
+        <label for="email">Email : </label>
+        <input type="email" name="email" placeholder="email@gmail.com">
+        <label for="tele">Phone Number : </label>
+        <input type="number" name="tele" placeholder="06********">
+        <label for="dateDebut"> </label>
+        <input type="date" name="dateDebut">
+        <input type="date" name="dateFin">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </div>
+
+    <!--END POP OUT SECTION-->
+
+
     <!--SERVICE SECTION-->
-    <section class="service bg-white flex justify-center items-center px-4 py-12">
+    <section id="service" class="service bg-white flex justify-center items-center px-4 py-12">
       <div class="service_contaire flex flex-col gap-8 md:gap-20">
         <div class="service_headres max-w-[768px]">
           <h2
@@ -183,41 +217,38 @@
       </div>
     </section>
     <!--END SERVICE SECTION-->
+
+
     <!--LOCATIONS SECTION-->
-    <section class="splide px-4 py-12" aria-label="Splide Basic HTML Example">
+    <section id="locations" class="location_section px-5 py-14 md:px-16 md:py-14">
+      <div class="location_container flex flex-col gap-12 md:gap-20">
+        <div
+          class="location_headers flex flex-col justify-center items-center gap-5 md:gap-6"
+        >
+          <h2 class="text-2xl font-bold leading-tight font-roboto">
+            Workspace Showcase
+          </h2>
+          <p class="text-center font-roboto">
+            Explore our vibrant coworking spaces designed for creativity.
+          </p>
+        </div>
+      </div>
+      <!--slider from library splide-->
+      <div class="splide px-4 py-12" aria-label="Splide Basic HTML Example">
       <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide pl-1 pr-1"><img class="object-fill" src="./img/space1.jpeg" alt=""></li>
+        <ul class="splide__list flex gap-2.5">
+          <li class="splide__slide"><img class="w-full h-full" src="./img/space1.jpeg" alt=""></li>
           <li class="splide__slide"><img class="w-full h-full bg-origin-content" src="./img/space2.jpeg" alt=""></li>
           <li class="splide__slide"><img class="w-full h-full bg-origin-content" src="./img/space3.jpeg" alt=""></li>
           <li class="splide__slide"><img class="w-full h-full bg-origin-contain" src="./img/space4.png" alt=""></li>
         </ul>
       </div>
+    </div>
     </section>
     <!--END LOCATIONS SECTION-->
-    <!--ABOUT SECTION-->
-    <section
-      class="about_section md:flex md:flex-col md:justify-center md:items-center"
-    >
-      <div class="about_container py-12">
-        <div class="centent px-3 md:w-[768px]">
-          <h2
-            class="text-2xl font-bold leading-tight text-center font-roboto mb-6"
-          >
-            Discover Workly: Your Ideal Coworking Space in Casablanca
-          </h2>
-          <p class="text-center font-roboto">
-            At Workly, we empower freelancers and startups by providing a
-            collaborative environment designed for productivity and creativity.
-            Our mission is to foster innovation and connection among
-            professionals, ensuring that everyone feels inspired and supported.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- END ABOUT SECTION-->
+
     <!-- Subscription Pricing Section -->
-    <section
+    <section id="pricing"
       class="flex flex-col items-center justify-center bg-white text-black py-12 px-4"
     >
       <!-- Header -->
@@ -253,6 +284,30 @@
       ></div>
     </section>
     <!-- END Subscription Pricing Section -->
+
+        <!--ABOUT SECTION-->
+    <section id="about"
+      class="about_section md:flex md:flex-col md:justify-center md:items-center"
+    >
+      <div class="about_container py-12">
+        <div class="centent px-3 md:w-[768px]">
+          <h2
+            class="text-2xl font-bold leading-tight text-center font-roboto mb-6"
+          >
+            Discover Workly: Your Ideal Coworking Space in Casablanca
+          </h2>
+          <p class="text-center font-roboto">
+            At Workly, we empower freelancers and startups by providing a
+            collaborative environment designed for productivity and creativity.
+            Our mission is to foster innovation and connection among
+            professionals, ensuring that everyone feels inspired and supported.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- END ABOUT SECTION-->
+
+
     <!--FOOTER-->
     <footer class="w-full bg-white px-4 py-6 flex justify-center items-center">
       <div class="w-full max-w-[1280px] flex flex-col gap-10 md:gap-20">
@@ -312,8 +367,21 @@
     </footer>
     <!-- End FOOTER-->
 
+
+
+
+
+
+
     <!-- Scrip splide library-->
      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+
+    <!--Animation library AOS JS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!--Main JS file-->
     <script src="script.js"></script>
   </body>

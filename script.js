@@ -1,3 +1,16 @@
+
+
+
+/* Header */
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+/* END Header */
+
+
 /* LOCATIONS SECTION */
 document.addEventListener("DOMContentLoaded", function () {
   var splide = new Splide(".splide", {
@@ -5,9 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
     perPage: 3,
     focus: "center",
   });
-  splide.mount();
+  splide.mount(); 
 });
 /* END LOCATIONS SECTION */
+
+
 /* PRICING SECTION  */
 const pricingPlans = [
   {
@@ -111,3 +126,5 @@ document.querySelectorAll(".tab-btn").forEach((btn) => {
 
 // Initial render
 renderCards();
+
+/* END PRICING SECTION  */
