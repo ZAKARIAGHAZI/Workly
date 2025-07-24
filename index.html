@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Tailwind Links-->
     <link href="./src/input.css" rel="stylesheet" />
     <link href="./src/output.css" rel="stylesheet" />
+    <!--Font awesome-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -12,12 +14,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!--google font likns-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <!--Splide library-->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
     <style>
       .font-roboto {
         font-family: "Roboto", sans-serif;
@@ -130,9 +136,7 @@
     </section>
     <!--END HERO SECTION -->
     <!--SERVICE SECTION-->
-    <section
-      class="service bg-white flex justify-center items-center px-4 py-12"
-    >
+    <section class="service bg-white flex justify-center items-center px-4 py-12">
       <div class="service_contaire flex flex-col gap-8 md:gap-20">
         <div class="service_headres max-w-[768px]">
           <h2
@@ -180,55 +184,14 @@
     </section>
     <!--END SERVICE SECTION-->
     <!--LOCATIONS SECTION-->
-    <section class="location_section px-5 py-14 md:px-16 md:py-14">
-      <div class="location_container flex flex-col gap-12 md:gap-20">
-        <div
-          class="location_headers flex flex-col justify-center items-center gap-5 md:gap-6"
-        >
-          <h2 class="text-2xl font-bold leading-tight font-roboto">
-            Workspace Showcase
-          </h2>
-          <p class="text-center font-roboto">
-            Explore our vibrant coworking spaces designed for creativity.
-          </p>
-        </div>
-        <!--Images of works spaces-->
-        <div
-          class="location_content relative flex flex-row gap-6 md:gap-8 overflow-hidden cursor-pointer"
-        >
-          <!--Left slider-->
-          <div
-            class="h-[46px] w-[46px] bg-white cursor-pointer text-center rounded-[50%] border leading-12 absolute top-1/2 left-2 -translate-y-1/2 z-10"
-          >
-            <i class="fa-solid fa-angle-left"></i>
-          </div>
-          <img
-            class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover"
-            src="img/space1.jpeg"
-            alt=""
-          />
-          <img
-            class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover"
-            src="img/space2.jpeg"
-            alt=""
-          />
-          <img
-            class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover"
-            src="img/space3.jpeg"
-            alt=""
-          />
-          <img
-            class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover"
-            src="img/space3.jpeg"
-            alt=""
-          />
-          <!--right slider-->
-          <div
-            class="h-[46px] w-[46px] bg-white cursor-pointer text-center rounded-[50%] border leading-12 absolute top-1/2 right-2 -translate-y-1/2 z-10"
-          >
-            <i class="fa-solid fa-angle-right"></i>
-          </div>
-        </div>
+    <section class="splide px-4 py-12" aria-label="Splide Basic HTML Example">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide pl-1 pr-1"><img class="object-fill" src="./img/space1.jpeg" alt=""></li>
+          <li class="splide__slide"><img class="w-full h-full bg-origin-content" src="./img/space2.jpeg" alt=""></li>
+          <li class="splide__slide"><img class="w-full h-full bg-origin-content" src="./img/space3.jpeg" alt=""></li>
+          <li class="splide__slide"><img class="w-full h-full bg-origin-contain" src="./img/space4.png" alt=""></li>
+        </ul>
       </div>
     </section>
     <!--END LOCATIONS SECTION-->
@@ -348,6 +311,10 @@
       </div>
     </footer>
     <!-- End FOOTER-->
+
+    <!-- Scrip splide library-->
+     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!--Main JS file-->
     <script src="script.js"></script>
   </body>
 </html>
