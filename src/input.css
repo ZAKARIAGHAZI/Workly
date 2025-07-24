@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+/* Add this to your head or CSS file*/
+.glow-card {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.glow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glow-bg {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--glow-color), transparent 60%);
+  z-index: 0;
+  opacity: 0.06;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}

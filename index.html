@@ -1,198 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="./src/output.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <style>
-            .font-roboto {
-                font-family: 'Roboto', sans-serif;
-            }
-        </style>
-        <title>Workly</title>
-        
-    </head>
-    <body>
-        <!-- HEADER -->
-        <header class="w-full h-[72px] px-4 md:px-10 flex justify-center items-center bg-white sticky top-0 z-50 shadow">
-            <div class="w-full  flex justify-between items-center">
-                <!-- Logo + Navigation -->
-                <div class="flex items-center gap-6">
-                    <!-- Logo -->
-                    <div class="w-[70px]">
-                        <img src="./img/file.svg" alt="Workly logo" class="w-full h-full object-contain"/>
-                    </div>
-                    <!-- Nav (Desktop) -->
-                    <nav class="hidden md:flex">
-                        <ul class="flex gap-6 text-sm font-medium text-black">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">Locations</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- Actions (Desktop) -->
-                <div class="hidden md:flex gap-2">
-                    <button class="w-[95px] h-9 border border-black text-black">Sign Up</button>
-                    <button class="w-[95px] h-9 bg-black text-white">Login</button>
-                </div>
-                <!-- Burger Menu (Mobile) -->
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="focus:outline-none">
-                        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden absolute top-20 left-0 w-full bg-white shadow-lg hidden">
-                <ul class="flex flex-col gap-4 px-6 py-4 text-sm font-medium text-black">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <div class="flex flex-col gap-2 mt-4">
-                        <button class="w-full h-9 border border-black text-black">Sign Up</button>
-                        <button class="w-full h-9 bg-black text-white">Login</button>
-                    </div>
-                </ul>
-            </div>
-        </header>
-        <!-- HERO SECTION -->
-        <section 
-        class="relative w-full h-screen bg-cover bg-center bg-no-repeat flex items-center"
-        style="background-image: url('./img/heroSection.jpg');"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/input.css" rel="stylesheet" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-roboto {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+    <title>Workly</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header
+      class="w-full h-[72px] px-4 md:px-10 flex justify-center items-center bg-white sticky top-0 z-50 shadow"
+    >
+      <div class="w-full flex justify-between items-center">
+        <!-- Logo + Navigation -->
+        <div class="flex items-center gap-6">
+          <!-- Logo -->
+          <div class="w-[70px]">
+            <img
+              src="./img/file.svg"
+              alt="Workly logo"
+              class="w-full h-full object-contain"
+            />
+          </div>
+          <!-- Nav (Desktop) -->
+          <nav class="hidden md:flex">
+            <ul class="flex gap-6 text-sm font-medium text-black">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Locations</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Actions (Desktop) -->
+        <div class="hidden md:flex gap-2">
+          <button class="w-[95px] h-9 border border-black text-black">
+            Sign Up
+          </button>
+          <button class="w-[95px] h-9 bg-black text-white">Login</button>
+        </div>
+        <!-- Burger Menu (Mobile) -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="focus:outline-none">
+            <svg
+              class="w-6 h-6 text-black"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden absolute top-20 left-0 w-full bg-white shadow-lg hidden"
+      >
+        <ul
+          class="flex flex-col gap-4 px-6 py-4 text-sm font-medium text-black"
         >
-            <!-- Dark Overlay -->       
-            <div class="absolute inset-0 bg-black opacity-60"></div>
-            <!-- Hero Content -->
-            <div class="relative z-10 max-w-4xl px-6 md:px-12 text-white">
-                <h1 class="text-4xl md:text-5xl font-bold leading-tight max-w-xl">
-                    Discover Your Ideal <br />
-                    Coworking Space Today
-                </h1>
-                <p class="mt-6 text-sm md:text-base max-w-md">
-                    Welcome to Workly, where creativity meets collaboration. Join a vibrant community of freelancers and professionals in the heart of Casablanca.
-                </p>
-                <button class="mt-8 px-6 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200 transition">
-                    Book a section
-                </button>
-            </div>
-        </section>
-        <!--SERVICE SECTION-->
-        <section class="service bg-white flex justify-center items-center px-4 py-12">
-            <div class="service_contaire flex flex-col gap-8 md:gap-20 ">
-                <div class="service_headres max-w-[768px]">
-                    <h2 class="text-2xl font-bold leading-tight text-center pb-4 font-roboto">Your Creative Workspace Awaits at Workly</h2>
-                    <p class="text-center font-roboto">At Workly, we redefine the concept of coworking. Join a vibrant community where freelancers and startups thrive together.</p>
-                </div>
-                <div class="service_content w-full flex items-center md:justify-between  flex-col md:flex-row gap-12 md:gap-14">
-                    <div class="srv_ctt1 flex flex-col items-center gap-5 md:gap-6">
-                        <i class="fa-solid fa-alarm-clock fa-2x"></i>
-                        <h4 class="text-lg font-semibold text-black text-center font-roboto">Open 24 hours</h4>
-                    </div>
-                    <div class="srv_ctt2 flex flex-col items-center gap-5 md:gap-6">
-                        <i class="fa-solid fa-cookie fa-2x"></i>
-                        <h4 class="text-lg font-semibold text-black text-center font-roboto"> Free Snack & Drink</h4>
-                    </div>
-                    <div class="srv_ctt3 flex flex-col items-center gap-5 md:gap-6">
-                        <i class="fa-solid fa-gamepad fa-2x"></i>
-                        <h4 class="text-lg font-semibold text-black text-center font-roboto">Enjoy Game Zone</h4>
-                    </div>
-                </div>
-                <div class="service_btn flex justify-center items-center">
-                    <button class="p-3 border text-black font-roboto">Learn More</button>
-                </div>
-            </div>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <div class="flex flex-col gap-2 mt-4">
+            <button class="w-full h-9 border border-black text-black">
+              Sign Up
+            </button>
+            <button class="w-full h-9 bg-black text-white">Login</button>
+          </div>
+        </ul>
+      </div>
+    </header>
+    <!--END HEADER-->
+    <!-- HERO SECTION -->
+    <section
+      class="relative w-full h-screen bg-cover bg-center bg-no-repeat flex items-center"
+      style="background-image: url('./img/heroSection.jpg')"
+    >
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black opacity-60"></div>
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-4xl px-6 md:px-12 text-white">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight max-w-xl">
+          Discover Your Ideal <br />
+          Coworking Space Today
+        </h1>
+        <p class="mt-6 text-sm md:text-base max-w-md">
+          Welcome to Workly, where creativity meets collaboration. Join a
+          vibrant community of freelancers and professionals in the heart of
+          Casablanca.
+        </p>
+        <button
+          class="mt-8 px-6 py-2 bg-white text-black font-semibold rounded hover:bg-gray-200 transition"
+        >
+          Book a section
+        </button>
+      </div>
+    </section>
+    <!--END HERO SECTION -->
+    <!--SERVICE SECTION-->
+    <section
+      class="service bg-white flex justify-center items-center px-4 py-12"
+    >
+      <div class="service_contaire flex flex-col gap-8 md:gap-20">
+        <div class="service_headres max-w-[768px]">
+          <h2
+            class="text-2xl font-bold leading-tight text-center pb-4 font-roboto"
+          >
+            Your Creative Workspace Awaits at Workly
+          </h2>
+          <p class="text-center font-roboto">
+            At Workly, we redefine the concept of coworking. Join a vibrant
+            community where freelancers and startups thrive together.
+          </p>
+        </div>
+        <div
+          class="service_content w-full flex items-center md:justify-between flex-col md:flex-row gap-12 md:gap-14"
+        >
+          <div class="srv_ctt1 flex flex-col items-center gap-5 md:gap-6">
+            <i class="fa-solid fa-alarm-clock fa-2x"></i>
+            <h4
+              class="text-lg font-semibold text-black text-center font-roboto"
+            >
+              Open 24 hours
+            </h4>
+          </div>
+          <div class="srv_ctt2 flex flex-col items-center gap-5 md:gap-6">
+            <i class="fa-solid fa-cookie fa-2x"></i>
+            <h4
+              class="text-lg font-semibold text-black text-center font-roboto"
+            >
+              Free Snack & Drink
+            </h4>
+          </div>
+          <div class="srv_ctt3 flex flex-col items-center gap-5 md:gap-6">
+            <i class="fa-solid fa-gamepad fa-2x"></i>
+            <h4
+              class="text-lg font-semibold text-black text-center font-roboto"
+            >
+              Enjoy Game Zone
+            </h4>
+          </div>
+        </div>
+        <div class="service_btn flex justify-center items-center">
+          <button class="p-3 border text-black font-roboto">Learn More</button>
+        </div>
+      </div>
+    </section>
+    <!--END SERVICE SECTION-->
+    <!--LOCATIONS SECTION-->
+    <section class="location_section px-5 py-14 md:px-16 md:py-14">
+      <div class="location_container flex flex-col gap-12 md:gap-20">
+        <div
+          class="location_headers flex flex-col justify-center items-center gap-5 md:gap-6"
+        >
+          <h2 class="text-2xl font-bold leading-tight font-roboto">
+            Workspace Showcase
+          </h2>
+          <p class="text-center font-roboto">
+            Explore our vibrant coworking spaces designed for creativity.
+          </p>
+        </div>
+        <!--Images of works spaces-->
+        <div
+          class="location_content relative flex flex-row gap-6 md:gap-8 overflow-hidden cursor-pointer"
+        >
+          <!--Left slider-->
+          <div
+            class="h-[46px] w-[46px] bg-white cursor-pointer text-center rounded-[50%] border leading-12 absolute top-1/2 left-2 -translate-y-1/2 z-10"
+          >
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <img
+            class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover"
+            src="img/space1.jpeg"
+            alt=""
+          />
+          <img
+            class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover"
+            src="img/space2.jpeg"
+            alt=""
+          />
+          <img
+            class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover"
+            src="img/space3.jpeg"
+            alt=""
+          />
+          <img
+            class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover"
+            src="img/space3.jpeg"
+            alt=""
+          />
+          <!--right slider-->
+          <div
+            class="h-[46px] w-[46px] bg-white cursor-pointer text-center rounded-[50%] border leading-12 absolute top-1/2 right-2 -translate-y-1/2 z-10"
+          >
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--END LOCATIONS SECTION-->
+    <!--ABOUT SECTION-->
+    <section
+      class="about_section md:flex md:flex-col md:justify-center md:items-center"
+    >
+      <div class="about_container py-12">
+        <div class="centent px-3 md:w-[768px]">
+          <h2
+            class="text-2xl font-bold leading-tight text-center font-roboto mb-6"
+          >
+            Discover Workly: Your Ideal Coworking Space in Casablanca
+          </h2>
+          <p class="text-center font-roboto">
+            At Workly, we empower freelancers and startups by providing a
+            collaborative environment designed for productivity and creativity.
+            Our mission is to foster innovation and connection among
+            professionals, ensuring that everyone feels inspired and supported.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- END ABOUT SECTION-->
+    <!-- Subscription Pricing Section -->
+    <section
+      class="flex flex-col items-center justify-center bg-white text-black py-12 px-4"
+    >
+      <!-- Header -->
+      <div class="text-center max-w-4xl mx-auto py-4">
+        <h2 class="text-3xl md:text-5xl font-bold text-black">
+          Pricing Plans
+        </h2>
+        <p class="mt-4 text-xs md:text-lg text-gray-600">
+          Choose the perfect plan for your needs today!
+        </p>
+      </div>
 
-        </section>
-        <!--LOCATIONS SECTION-->
-        <section class="location_section px-5 py-14 md:px-16 md:py-14">
-            <div class="location_container flex flex-col gap-12 md:gap-20">
-                <div class="location_headers flex flex-col justify-center items-center gap-5 md:gap-6">
-                    <h2 class="text-2xl font-bold leading-tight font-roboto">Workspace Showcase</h2>
-                    <p class="text-center font-roboto">Explore our vibrant coworking spaces designed for creativity.</p>
-                </div>
-                <!--Images of works spaces-->
-                <div class="location_content relative flex flex-row gap-6 md:gap-8 overflow-hidden cursor-pointer">
-                    <!--Left slider-->
-                    <div class=" h-[46px] w-[46px] bg-white cursor-pointer text-center rounded-[50%] border leading-12 absolute top-1/2 left-2 -translate-y-1/2 z-10">
-                        <i class="fa-solid fa-angle-left"></i>
-                    </div>
-                    <img class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover" src="img/space1.jpeg" alt="">
-                    <img class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover" src="img/space2.jpeg" alt="">
-                    <img class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover" src="img/space3.jpeg" alt="">
-                    <img class="h-[144px] md:h-[350px] w-[cal(100/3)] object-cover" src="img/space3.jpeg" alt="">
-                    <!--right slider-->
-                    <div class=" h-[46px] w-[46px] bg-white cursor-pointer text-center rounded-[50%] border leading-12 absolute top-1/2 right-2 -translate-y-1/2 z-10">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-        <!--ABOUT SECTION-->
-        <section class="about_section md:flex md:flex-col md:justify-center md:items-center">
-            <div class="about_container py-12">
-                <div class="centent px-3 md:w-[768px]">
-                    <h2 class="text-2xl font-bold leading-tight text-center font-roboto mb-6">Discover Workly: Your Ideal Coworking Space in Casablanca</h2>
-                    <p class="text-center font-roboto">
-                        At Workly, we empower freelancers and startups by providing a collaborative environment designed for productivity and creativity. 
-                        Our mission is to foster innovation and connection among professionals, ensuring that everyone feels inspired and supported.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!--FOOTER-->
-        <footer class="w-full bg-white px-4 py-6 flex justify-center items-center">
-            <div class="w-full max-w-[1280px] flex flex-col gap-10 md:gap-20">
-                <!-- Top section -->
-                <div class="w-full grid grid-cols-1 md:grid-cols-3 items-center gap-6">
-                    <!-- Logo -->
-                    <div class="flex justify-center md:justify-start">
-                        <img src="./img/file.svg" alt="Workly logo" class="h-10 md:h-12 object-contain" />
-                    </div>
-                    <!-- Nav Links -->
-                    <ul class="flex flex-col md:flex-row justify-center gap-4 font-roboto font-medium text-sm text-center">
-                        <li>Our Blogs</li>
-                        <li>Join Us</li>
-                        <li>Get Inspired</li>
-                        <li>Community Events</li>
-                        <li>FAQs</li>
-                    </ul>
-                    <!-- Social Icons -->
-                    <ul class="flex justify-center md:justify-end gap-3 text-xl">
-                        <li><a href=""><i class="fa-brands fa-facebook "></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-instagram "></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-                    </ul>
-                </div>
+      <!-- Tabs -->
+      <div class="flex gap-4 mt-6 mb-10 border p-0.5">
+        <button
+          class="tab-btn px-4 py-2 border text-black"
+          data-tab="Monthly"
+        >
+          Monthly
+        </button>
+        <button
+          class="tab-btn px-4 py-2 text-black "
+          data-tab="Annual"
+        >
+          Annual
+        </button>
+      </div>
 
-                <!-- Bottom section -->
-                <div class="w-full flex flex-col items-center gap-4">
-                    <hr class="w-full">
-                    <ul class="flex flex-col md:flex-row gap-2 md:gap-4 text-sm justify-center text-center">
-                        <li>© 2025 Workly. All rights reserved</li>
-                        <li><a href="" class="hover:underline">Privacy Policy</a></li>
-                        <li><a href="" class="hover:underline">Terms of Use</a></li>
-                        <li><a href="" class="hover:underline">Cookie Policy</a></li>
-                    </ul>
-                </div>
+      <!-- Pricing Cards -->
+      <div
+        id="cards-container"
+        class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full"
+      ></div>
+    </section>
+    <!-- END Subscription Pricing Section -->
+    <!--FOOTER-->
+    <footer class="w-full bg-white px-4 py-6 flex justify-center items-center">
+      <div class="w-full max-w-[1280px] flex flex-col gap-10 md:gap-20">
+        <!-- Top section -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-3 items-center gap-6">
+          <!-- Logo -->
+          <div class="flex justify-center md:justify-start">
+            <img
+              src="./img/file.svg"
+              alt="Workly logo"
+              class="h-10 md:h-12 object-contain"
+            />
+          </div>
+          <!-- Nav Links -->
+          <ul
+            class="flex flex-col md:flex-row justify-center gap-4 font-roboto font-medium text-sm text-center"
+          >
+            <li>Our Blogs</li>
+            <li>Join Us</li>
+            <li>Get Inspired</li>
+            <li>Community Events</li>
+            <li>FAQs</li>
+          </ul>
+          <!-- Social Icons -->
+          <ul class="flex justify-center md:justify-end gap-3 text-xl">
+            <li>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
 
-            </div>
-        </footer>
-
-    </body>
+        <!-- Bottom section -->
+        <div class="w-full flex flex-col items-center gap-4">
+          <hr class="w-full" />
+          <ul
+            class="flex flex-col md:flex-row gap-2 md:gap-4 text-sm justify-center text-center"
+          >
+            <li>© 2025 Workly. All rights reserved</li>
+            <li><a href="" class="hover:underline">Privacy Policy</a></li>
+            <li><a href="" class="hover:underline">Terms of Use</a></li>
+            <li><a href="" class="hover:underline">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End FOOTER-->
+    <script src="script.js"></script>
+  </body>
 </html>
