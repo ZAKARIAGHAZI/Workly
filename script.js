@@ -68,6 +68,24 @@ function closeModal(modal) {
   overlay.classList.remove("active", "opacity-100", "pointer-events-auto");
 }
 
+/* Email JS */
+ emailjs.init("YGEo1Kf65bA_Bifij"); // Replace with your public key
+
+ document
+   .getElementById("contact-form")
+   .addEventListener("submit", function (e) {
+     e.preventDefault();
+
+     emailjs.sendForm("service_kmgrs4c", "template_04n3syq", this).then(
+       function () {
+         alert("Message sent successfully!");
+       },
+       function (error) {
+         alert("Failed to send message: " + JSON.stringify(error));
+       }
+     );
+   });
+/*END Email JS */
 /*ENDPOP OUT FORM*/
 
 /* LOCATIONS SECTION */
