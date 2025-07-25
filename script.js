@@ -5,7 +5,7 @@
   const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
   const navLinks = mobileMenu.querySelectorAll("a");
-
+  
   menuToggle.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
   });
@@ -16,17 +16,46 @@
         mobileMenu.classList.add("hidden");
       });
     });
+
+    //Flip Style 
+    function setupHoverFlip(signupId, loginId) {
+      const signup = document.getElementById(signupId);
+      const login = document.getElementById(loginId);
+
+      function flip() {
+        signup.classList.toggle("bg-black");
+        signup.classList.toggle("text-white");
+
+        login.classList.toggle("bg-black");
+        login.classList.toggle("text-white");
+      }
+
+
+
+      [signup, login].forEach((btn) => {
+        btn.addEventListener("mouseenter", flip);
+        btn.addEventListener("mouseleave", flip);
+      });
+    }
+
+    // Apply for desktop
+    setupHoverFlip("signupBtn", "loginBtn");
+
+    // Apply for mobile
+    setupHoverFlip("signupBtnMobile", "loginBtnMobile");
 /* END Header */
 
 
 /*POP OUT FORM*/
 
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
-const closeModalButtons = document.querySelectorAll("[data-close-button]");
+const closeModalButtons = document.getElementById("closeModal");
 const overlay = document.getElementById("overlay");
 
 openModalButtons.forEach((button) => {
   button.addEventListener("click", () => {
+    
+    
     const modal = document.querySelector(button.dataset.modalTarget);
     openModal(modal);
   });
@@ -39,12 +68,12 @@ overlay.addEventListener("click", () => {
   });
 });
 
-closeModalButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const modal = button.closest(".modal");
-    closeModal(modal);
-  });
-});
+closeModalButtons.addEventListener("click",()=>{
+  document.getElementById("module").style.display = "none"
+  overlay.classList.remove("active", "opacity-100");
+  
+})
+
 
 function openModal(modal) {
   if (modal == null) return;
@@ -55,7 +84,8 @@ function openModal(modal) {
     "-translate-y-1/2",
     "scale-100"
   );
-  overlay.classList.add("active", "opacity-100", "pointer-events-auto");
+  document.getElementById("module").style.display = "block";
+  overlay.classList.add("active", "opacity-100");
 }
 
 function closeModal(modal) {
@@ -65,18 +95,18 @@ function closeModal(modal) {
     "-translate-x-1/2",
     "-translate-y-1/2",
     "scale-100");
-  overlay.classList.remove("active", "opacity-100", "pointer-events-auto");
+  overlay.classList.remove("active", "opacity-100");
 }
 
 /* Email JS */
- emailjs.init("YGEo1Kf65bA_Bifij"); // Replace with your public key
+ emailjs.init("YGEo1Kf65bA_Bifij");
 
  document
    .getElementById("contact-form")
    .addEventListener("submit", function (e) {
      e.preventDefault();
 
-     emailjs.sendForm("service_kmgrs4c", "template_04n3syq", this).then(
+     emailjs.sendForm("service_kmgrs4c", "template_nrkay2q", this).then(
        function () {
          alert("Message sent successfully!");
        },
