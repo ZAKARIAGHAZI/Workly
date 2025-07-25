@@ -4,12 +4,71 @@
 /* Header */
   const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
+  const navLinks = mobileMenu.querySelectorAll("a");
 
   menuToggle.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
   });
+
+  // Close menu when a nav link is clicked
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
 /* END Header */
 
+
+/*POP OUT FORM*/
+
+const openModalButtons = document.querySelectorAll("[data-modal-target]");
+const closeModalButtons = document.querySelectorAll("[data-close-button]");
+const overlay = document.getElementById("overlay");
+
+openModalButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal = document.querySelector(button.dataset.modalTarget);
+    openModal(modal);
+  });
+});
+
+overlay.addEventListener("click", () => {
+  const modals = document.querySelectorAll(".modal.active");
+  modals.forEach((modal) => {
+    closeModal(modal);
+  });
+});
+
+closeModalButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal = button.closest(".modal");
+    closeModal(modal);
+  });
+});
+
+function openModal(modal) {
+  if (modal == null) return;
+  modal.classList.add(
+    "active",
+    "transform",
+    "-translate-x-1/2",
+    "-translate-y-1/2",
+    "scale-100"
+  );
+  overlay.classList.add("active", "opacity-100", "pointer-events-auto");
+}
+
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove("active"  ,
+    "transform",
+    "-translate-x-1/2",
+    "-translate-y-1/2",
+    "scale-100");
+  overlay.classList.remove("active", "opacity-100", "pointer-events-auto");
+}
+
+/*ENDPOP OUT FORM*/
 
 /* LOCATIONS SECTION */
 document.addEventListener("DOMContentLoaded", function () {
@@ -77,11 +136,11 @@ function renderCards() {
 
     const card = document.createElement("div");
     card.className =
-      "glow-card p-6 md:p-8 text-black flex flex-col justify-between border border-gray-200 bg-white";
+      "glow-card p-6 md:p-8 text-black flex flex-col border border-gray-200 bg-white";
 
     card.innerHTML = `
       <div class="glow-bg"}"></div>
-      <div class="card-content">
+      <div class="card-content flex flex-col h-full">
         <h2 class="text-2xl font-bold text-center">${plan.name}</h2>
         <p class="mt-2 text-center text-sm text-gray-500">${
           plan.description
@@ -92,13 +151,16 @@ function renderCards() {
         <ul class="mt-6 space-y-2 text-gray-700 text-sm">
           ${plan.features
             .map(
-              (f) => `<li><i class="fas fa-check text-black mr-1.5"></i>${f}</li>`
+              (f) =>
+                `<li><i class="fas fa-check text-black mr-1.5"></i>${f}</li>`
             )
             .join("")}
         </ul>
-        <button class="bg-black text-white w-full py-3 mt-6 transition hover:bg-gray-950">
-          Subscribe Now
-        </button>
+        <div class="mt-auto pt-6">
+          <button class="bg-black text-white w-full py-3 transition hover:bg-gray-950">
+            Subscribe Now
+          </button>
+        </div>
       </div>
     `;
 
